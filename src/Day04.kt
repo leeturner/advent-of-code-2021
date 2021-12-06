@@ -36,7 +36,7 @@ class Board private constructor(private val boardRows: List<MutableList<Cell>>) 
 
     fun getUnmarked() = this.boardRows
         .flatten()
-        .filter { it.marked == false }
+        .filter { !it.marked }
         .map { it.value }
 
     companion object {
